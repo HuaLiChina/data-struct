@@ -1,0 +1,10 @@
+package lcmtypes;
+struct speed_cmd_t
+{
+	int64_t utime;
+
+        float aim_spe;     	//目标速度（公里/小时）
+        int32_t mode;     	//模式
+        float t;		//时间s（在该时间内达到目标速度）
+}
+

@@ -1,0 +1,18 @@
+package lcmtypes;
+
+struct map_line_point_t
+{
+        lcmtypes.float_point_2d_t  markerPoint;// 车身坐标系下，x,y
+    float  heading;						//朝向
+    int16_t laneIndex;					//隶属于的车道ID
+    int8_t property;					//此点位置处车道线的属性
+                                                        //0:无线
+                                                        //1：正常虚线
+                                                        //2：宽虚线
+                                                        //3：实线
+                                                        //4：双实线
+                                                        //5：斑马线
+                                                        //6：黄实线
+                                                        //7：双黄实线
+                                                        //8：
+}

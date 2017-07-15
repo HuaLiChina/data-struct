@@ -1,0 +1,8 @@
+package lcmtypes;
+
+struct float_point_3d_t
+{
+    float  x;
+    float  y;
+    float  z;
+}

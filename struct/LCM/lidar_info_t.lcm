@@ -1,0 +1,49 @@
+package lcmtypes;
+struct key_point_t
+{
+    float  x;
+    float  y;
+}
+struct object_outline_t   
+{
+	//车身60m方圆内所有障碍物（动静态障碍统一按静态处理，20cm分辨率）
+	int16_t objectOutlinePointCount;//障碍物个数
+	lcmtypes.key_point_t staticObjectPoints[objectOutlinePointCount];//障碍的轮廓点集
+}
+
+struct moving_object_t
+//运动障碍结构
+{
+	lcmtypes.key_point_t objectCenterPosition;	//障碍中心位置坐标x,y
+	lcmtypes.key_point_t objectCenterSpeed;		//障碍的运动速度，x,y方向
+	lcmtypes.object_outline_t objectOutline;//障碍的轮廓点集
+}
+struct lidar_object_t
+//运动障碍结构
+{
+	int64_t utime;//时间戳
+	lcmtypes.moving_obj_t leftFrontObject;	//左前障碍物
+	lcmtypes.moving_obj_t frontObject;		//正前障碍物
+	lcmtypes.moving_obj_t rightFrontObject;	//右前障碍物
+	lcmtypes.moving_obj_t leftRearObject;	//左后障碍物
+	lcmtypes.moving_obj_t rearObject;		//正后障碍物
+	lcmtypes.moving_obj_t rightRearObject;	//右后障碍物
+	lcmtypes.moving_obj_t leftObject;		//左边障碍物
+	lcmtypes.moving_obj_t rightObject;		//右边障碍物
+}
+struct lidar_line_info_t
+{
+//x=ax3+bx2+cx+d
+	float confidence;	//线的可信度
+	float  a;			//拟合曲线参数
+	float  b;
+	float  c;
+	float  d;
+}
+struct road_boundary_t   
+{
+//左右道路边界，用三次曲线表示，x=ay3+by2+cy+d
+	int64_t utime;  			//时间
+	lcmtypes.lidar_line_info_t leftRoadBoundary;
+	lcmtypes.lidar_line_info_t rightRoadBoundary;
+}

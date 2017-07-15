@@ -1,0 +1,17 @@
+package lcmtypes;
+
+struct camera_object_t
+{
+	lcmtypes.float_point_2d_t centerPoint;	//中心点
+	int16_t id;		 		//目标的ID
+	int8_t type;		 		//目标的类别
+	int8_t brake;				//刹车为状态
+	int8_t turn;				//转向灯状态
+	float speedLon;      			//纵向相对运动速度
+	float speedLat;      			//横向相对运动速度
+	float angle;				//车的朝向
+	float confidence;			//目标的可信度
+	float width;				//目标的宽度
+	float height;				//目标的高度
+	float length;				//目标的长度
+}

@@ -1,0 +1,12 @@
+package lcmtypes;
+
+struct camera_info_t
+{
+	int64_t utime;  						//时间
+	byte  change_lane;						//换道状态
+	float lane_width;						//车道宽度
+	lcmtypes.camera_center_line_info_t center_line;			//本车道中心线
+	lcmtypes.camera_line_info_t lines[4];				//四条车道线信息
+	int16_t	object_count;        				 	// 目标个数
+	lcmtypes.camera_object_t objects[object_count];			//目标的集合
+}

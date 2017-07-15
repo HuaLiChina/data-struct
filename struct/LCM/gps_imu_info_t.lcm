@@ -1,0 +1,24 @@
+package lcmtypes;
+
+struct gps_imu_info_t
+{
+	int64_t utime;  		//时间
+	double  longitude;		//经度
+	double  latitude;		//纬度
+	float 	altitude;		//高度
+	float   yaw;			//航向角
+	float   roll;			//翻滚角
+	float   pitch;			//俯仰角
+	float	yawRate;		//横摆角速度
+	float   velocityNorth;		//北向车速
+	float   velocityEast;		//东向车速
+	float	velocityDown;		//垂直地面速度
+	float   velocity;		//车速
+	float   locationStatus;		//定位模式
+	float   confidenceLevel;	//可信度
+	float   yawEstimate;		//航向角估计值
+	double  longitudeEstimate;	//经度估计值
+	double  latitudeEstimate;	//纬度估计值
+	int16_t satelliteNumber;	//卫星数量
+
+}

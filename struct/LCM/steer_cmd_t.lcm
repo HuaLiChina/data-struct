@@ -1,0 +1,9 @@
+package lcmtypes;
+struct steer_cmd_t
+{
+	int64_t utime;
+
+        float steer_pos;     	//方向盘当前位置
+        int32_t steer_spe;      //方向盘转速
+}
+

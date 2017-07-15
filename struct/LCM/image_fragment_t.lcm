@@ -1,0 +1,15 @@
+package lcmtypes;
+
+struct image_fragment_t
+{
+    int64_t  utime;
+
+    int16_t  fragment_count, fragment_index, width, height, stride;
+
+    // pixelformat uses standard fourcc codings.  see common/pixels.h
+    //       /usr/include/linux/videodev2.h
+    int32_t  pixelformat;
+
+    int32_t  imageSize, fragmentSize;
+    byte     image[fragmentSize];
+}

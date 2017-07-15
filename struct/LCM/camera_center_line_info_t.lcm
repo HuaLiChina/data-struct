@@ -1,0 +1,12 @@
+package lcmtypes;
+
+struct camera_center_line_info_t
+{
+	//x=ax3+bx2+cx+d
+	float confidence;	//线的可信度
+	float length;		//中心线长度
+	float  a;		//拟合曲线参数
+	float  b;
+	float  c;
+	float  d;
+}

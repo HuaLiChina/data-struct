@@ -1,0 +1,8 @@
+package lcmtypes;
+
+struct map_line_info_t
+{
+	int8_t laneMarkerIndex;								//车道线的序号
+	int16_t	pointsCount;         							//车道线点数量
+        lcmtypes.map_line_point_t points[pointsCount];					//车道线的连续经纬度点及相关信息
+}

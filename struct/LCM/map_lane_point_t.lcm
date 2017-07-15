@@ -1,0 +1,21 @@
+package lcmtypes;
+
+struct map_lane_point_t
+{
+    lcmtypes.float_point_3d_t	point;	//以车身坐标以车体坐标，后轴中心点为原点，前进方向为X，横向左为Y，向上为Z
+    float  heading;					//朝向
+    int16_t speedLimited;				//车道限速，单位公里每小时，为整数
+    int8_t property;					//属性  0：无限制
+                                                        //1:只能直行
+                                                        //2：只能左转
+                                                        //3：只能右转
+                                                        //4：直行+左转
+                                                        //5：直行+右转
+                                                        //6：允许U调头
+                                                        //7：允许直+左+U
+                                                        //16：禁止左
+                                                        //17：禁止右
+                                                        //18：禁止直
+                                                        //19：禁止调头
+
+}

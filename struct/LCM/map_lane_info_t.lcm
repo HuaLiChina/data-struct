@@ -1,0 +1,10 @@
+package lcmtypes;
+
+struct map_lane_info_t
+{
+	int16_t laneIndex;								//车道的ID
+	int16_t isABothWay;								//是否为双向车道
+	float width;      								//车道宽度
+	int16_t	centerPointCount;         						//车道中心线点数量
+        lcmtypes.map_lane_point_t centerPoints[centerPointCount];				//中心线点的经纬度等信息
+}

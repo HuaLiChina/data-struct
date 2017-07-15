@@ -1,0 +1,10 @@
+package lcmtypes;
+
+struct velodyne_t
+{
+//velodyne原始数据
+	int64_t utime;
+
+	int32_t datalen;
+	byte data[datalen];
+}
