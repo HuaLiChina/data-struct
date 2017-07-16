@@ -4,15 +4,18 @@ struct vehicle_status_t
 	int64_t utime;
 
         int32_t nauto;   	//1为自动，0为手动
-        float steer_pos;      	//方向盘当前位置
-        int32_t steer_spe;      //方向盘转速
+        float steerPos;      	//方向盘当前位置
+        int32_t steerSpe;      //方向盘转速
         int32_t light;      	//转向
-        float spel;     	//左轮速度（公里/小时）
-        float sper;     	//右轮速度（公里/小时）
+        float speLeft;     	//左轮速度（公里/小时）
+        float speRight;     	//右轮速度（公里/小时）
         float vot;      	//电压
         int32_t shift;   	//挡位
-        float disl;     	//左轮距离
-        float disr;     	//右轮距离
+        float disLeft;     	//左轮距离
+        float disRight;     	//右轮距离
         float speo;     	//保留
+	float yawRate;	        //横摆角速度
+	float accelerationLon;  //纵向加速度
+	float accelerationLat;	//横向加速度
 }
 
