@@ -4,7 +4,7 @@ struct key_point_t
     float  x;
     float  y;
 }
-struct object_outline_t   
+struct object_outline_t
 {
 	//车身60m方圆内所有障碍物（动静态障碍统一按静态处理，20cm分辨率）
 	int16_t objectOutlinePointCount;//障碍物个数
@@ -22,14 +22,14 @@ struct lidar_object_t
 //运动障碍结构
 {
 	int64_t utime;//时间戳
-	lcmtypes.moving_obj_t leftFrontObject;	//左前障碍物
-	lcmtypes.moving_obj_t frontObject;		//正前障碍物
-	lcmtypes.moving_obj_t rightFrontObject;	//右前障碍物
-	lcmtypes.moving_obj_t leftRearObject;	//左后障碍物
-	lcmtypes.moving_obj_t rearObject;		//正后障碍物
-	lcmtypes.moving_obj_t rightRearObject;	//右后障碍物
-	lcmtypes.moving_obj_t leftObject;		//左边障碍物
-	lcmtypes.moving_obj_t rightObject;		//右边障碍物
+	lcmtypes.moving_object_t leftFrontObject;	//左前障碍物
+	lcmtypes.moving_object_t frontObject;		//正前障碍物
+	lcmtypes.moving_object_t rightFrontObject;	//右前障碍物
+	lcmtypes.moving_object_t leftRearObject;	//左后障碍物
+	lcmtypes.moving_object_t rearObject;		//正后障碍物
+	lcmtypes.moving_object_t rightRearObject;	//右后障碍物
+	lcmtypes.moving_object_t leftObject;		//左边障碍物
+	lcmtypes.moving_object_t rightObject;		//右边障碍物
 }
 struct lidar_line_info_t
 {
@@ -40,7 +40,7 @@ struct lidar_line_info_t
 	float  c;
 	float  d;
 }
-struct road_boundary_t   
+struct road_boundary_t
 {
 //左右道路边界，用三次曲线表示，x=ay3+by2+cy+d
 	int64_t utime;  			//时间
