@@ -1,0 +1,11 @@
+package lcmtypes;
+
+struct map_point_t
+{
+    double lon;
+    double lat;
+    float  localX;
+    float  localY;
+    float  globalX;
+    float  globalY;
+}
