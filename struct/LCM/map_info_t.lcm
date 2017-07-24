@@ -6,22 +6,18 @@ struct map_info_t
 	int16_t currentLaneIndex;						//本车道的序号
 	int8_t speedLimited;							//本车道限速，单位公里每小时，为整数
 	int8_t laneCount;								//此处共有多少车道
-	int8_t laneMarkerCount;							//此处共有多少条车道线
-	float laneHeading;      						//当前车道的朝向
 	float distance2LeftMarker;      				//距左侧车道线距离
 	float distance2Rightmarker;      				//距右侧车道线距离
-	float distance2LeftBoundary;      				//距左侧边界距离
-	float distance2RightBoundary;      				//距右侧边界距离
 
 	int16_t specialPointCount;						//特殊点个数
         lcmtypes.map_special_point_t specialPoints[specialPointCount];			//特殊点信息
-	int16_t leftBoundaryPointCount;						//左边界点个数
-        lcmtypes.map_boundary_point_t leftBoundaryPoints[leftBoundaryPointCount];		//左边界点信息
-	int16_t rightBoundaryPointCount;						//右边界点个数
-        lcmtypes.map_boundary_point_t rightBoundaryPoints[rightBoundaryPointCount];	//右边界点信息
-	int16_t adjacentLaneCount;								//相邻车道数，指左中右三车道
-        lcmtypes.map_lane_info_t laneInfo[adjacentLaneCount];					//所有车道信息
-	int16_t adjacentLaneMarkerCount;								//相邻车道线条数
-        lcmtypes.map_line_info_t lineInfo[adjacentLaneMarkerCount];					//相邻车道线信息
+
+	int16_t boundaryCount;						//边界条数
+        lcmtypes.map_road_boundary_t boundary[boundaryCount];	//边界信息
+
+        lcmtypes.map_lane_info_t laneInfo[3];					//所有车道信息
+
+	int16_t lineCount;								//相邻车道线条数
+        lcmtypes.map_line_info_t lineInfo[lineCount];					//相邻车道线信息
 
 }

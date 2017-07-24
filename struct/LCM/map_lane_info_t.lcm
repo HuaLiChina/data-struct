@@ -5,6 +5,18 @@ struct map_lane_info_t
 	int16_t laneIndex;								//车道的ID
 	int16_t isABothWay;								//是否为双向车道
 	float width;      								//车道宽度
-	int16_t	centerPointCount;         						//车道中心线点数量
-        lcmtypes.map_lane_point_t centerPoints[centerPointCount];				//中心线点的经纬度等信息
+	int16_t	pointsCount;         						//车道中心线点数量
+        lcmtypes.map_point_t points[pointsCount];				//中心线点的经纬度等信息
+    int8_t property;					//属性  0：无限制
+                                                        //1:只能直行
+                                                        //2：只能左转
+                                                        //3：只能右转
+                                                        //4：直行+左转
+                                                        //5：直行+右转
+                                                        //6：允许U调头
+                                                        //7：允许直+左+U
+                                                        //16：禁止左
+                                                        //17：禁止右
+                                                        //18：禁止直
+                                                        //19：禁止调头
 }
