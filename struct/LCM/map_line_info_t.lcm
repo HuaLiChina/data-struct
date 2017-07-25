@@ -5,14 +5,9 @@ struct map_line_info_t
 	int8_t laneMarkerIndex;								//车道线的序号
 	int16_t	pointsCount;         							//车道线点数量
         lcmtypes.map_point_t points[pointsCount];					//车道线的连续经纬度点及相关信息
-    int8_t property;					//此点位置处车道线的属性
-                                                        //0:无线
-                                                        //1：正常虚线
-                                                        //2：宽虚线
-                                                        //3：实线
-                                                        //4：双实线
-                                                        //5：斑马线
-                                                        //6：黄实线
-                                                        //7：双黄实线
-                                                        //8：
+        int8_t pointsProperty[pointsCount];					//0不能进行换道
+//1向左换道
+//2向右换道
+//3向左或向右换道
+
 }
