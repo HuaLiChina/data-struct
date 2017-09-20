@@ -1,0 +1,11 @@
+package lcmtypes;
+
+struct img_object_info_t
+{
+	int16_t ImgLeft;
+	int16_t ImgTop;
+	int16_t ImgRight;
+	int16_t ImgBottom;
+	int16_t ImgCollisionPoint[2];
+	int8_t Type;
+}

@@ -1,0 +1,9 @@
+package lcmtypes;
+
+struct mo_paras_info_t
+{
+	double fBF;
+	double fBase;
+	int32_t nVanishingPointX;
+	int32_t	nVanishingPointY;
+}

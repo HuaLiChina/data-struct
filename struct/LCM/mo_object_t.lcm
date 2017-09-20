@@ -1,0 +1,15 @@
+package lcmtypes;
+
+struct mo_object_info_t
+{
+	int32_t Id;
+	int16_t XOffset;
+	int16_t ZDistance;
+	int16_t Width;
+	int16_t Height;
+	int8_t SpeedX;
+	int8_t SpeedZ;
+	int16_t Type;
+	int16_t ControlPoints[3][2];
+	int8_t TTCtime;
+}

@@ -1,0 +1,36 @@
+package lcmtypes;
+
+struct mo_info_t
+{
+	int32_t nFrameID;
+	//世界坐标系数据
+	mo_radarpoint_info_t radarinfo[101];//雷达
+	int8_t nLaneNum;
+	mo_line_info_t lines[8];//车道线
+	mo_guardrail_info_t curb;//路肩
+	mo_guardrail_info_t guardrail;//栏杆
+        int8_t nObjNum;
+        mo_object_info_t objects[100];//障碍
+	int8_t dangerousObjNum;
+        mo_object_info_t dangerousObjects[100];//最危险障碍
+
+	//图像坐标系数据
+	int16_t BoundaryInfo[1280];
+	int8_t imgLaneNum;
+	img_line_info_t imgLines[8];//车道线
+	img_guardrail_info_t imgCurb;
+	img_guardrail_info_t imgGuardrail;
+	int8_t imgObjNum;
+	img_object_info_t imgObjects[100];
+	int8_t imgDangerousObjNum;
+	img_object_info_t imgDangerousObjects[100];
+
+	//控制ui数据
+	mo_controluidata_info_t controluidata;
+
+	//参数数据
+	mo_paras_info_t cameraParas;
+
+	//原始图像
+	//uint8_t *pRefImage;
+}

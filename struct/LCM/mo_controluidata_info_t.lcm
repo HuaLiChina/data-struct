@@ -1,0 +1,18 @@
+package lcmtypes;
+
+struct mo_controluidata_info_t
+{
+	int32_t FrontObjectDistance;
+	int32_t TTC;
+	int32_t LeftLaneDistance;
+	int32_t RightLaneDistance;
+	int32_t FrontObjectDistanceVisionSignal;
+	int32_t FrontObjectType;
+	int32_t FrontObjectDistanceAudioSignal;
+	int32_t TTCSignal;
+	int32_t LeftLaneDepartSignal;
+	int32_t RightLaneDepartSignal;
+	int32_t FrontObjectIdx;
+	int32_t LeftLaneIdx;
+	int32_t RightLaneIdx;
+}

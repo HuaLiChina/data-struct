@@ -1,0 +1,12 @@
+package lcmtypes;
+
+struct mo_guardrail_info_t
+{
+	int8_t bValid0;
+	int16_t RealPointXZ0[2][2];
+	int16_t Height0;
+
+	int8_t bValid1;
+	int16_t RealPointXZ1[2][2];
+	int16_t Height1;
+}

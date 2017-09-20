@@ -1,0 +1,10 @@
+package lcmtypes;
+
+struct img_guardrail_info_t
+{
+	int8_t bValid0;
+	int16_t ImgPointXY0[4][2];
+
+	int8_t bValid1;
+	int16_t ImgPointXY1[4][2];
+}
