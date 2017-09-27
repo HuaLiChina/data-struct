@@ -9,6 +9,7 @@ struct map_info_t
 	int8_t thisSegmentType;						//当前所处位置类型0一般车道1路口2区域
 	int8_t nextSegmentType;						//下一路段所处位置类型0一般车道1路口2区域
 	int8_t junctionType;						//路口属性0一般十字路口或丁字路口1单向道路入口2单向道路出口3单向道路出入口4为了便于编程连接关系的虚拟道路连接点5未定义
+	int8_t turnType;						//转向灯类别 0直行1左转2右转
 	float distance2Junction;					//到路口的距离
 	float speedLimited;						//本路段限速，单位公里每小时，为整数
 	float nextSegmentSpeedLimited;					//下一路段限速，单位公里每小时，为整数
