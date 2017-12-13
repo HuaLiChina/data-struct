@@ -1,0 +1,23 @@
+package lcmtypes;
+struct control_command_t
+{
+  int64_t utime;
+
+  double throttle;
+  double brake;
+  double steeringRate;
+  double steeringTarget;
+  double speed;
+  double acceleration;
+  boolean engineOnOff;
+  boolean leftTurn;
+  boolean rightTurn;
+
+  boolean horn;
+  boolean parkingBrake;
+  boolean resetModel;
+  int16_t drivingMode;
+  int16_t gearLocation;
+
+}
+
