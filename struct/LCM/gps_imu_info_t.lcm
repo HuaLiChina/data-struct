@@ -13,6 +13,9 @@ struct gps_imu_info_t
 	float   velocityNorth;		//北向车速
 	float   velocityEast;		//东向车速
 	float	velocityDown;		//垂直地面速度
+	float   accelerationLongitudinal;//纵向加速度
+	float   accelerationLateral;    //横向加速度
+        float   acceleration;		//向地加速度
 	float   velocity;		//车速
 	float   locationStatus;		//定位模式
 	float   confidenceLevel;	//可信度
