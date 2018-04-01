@@ -1,0 +1,10 @@
+package lcmtypes;
+
+struct route_status_t
+{
+	int64_t utime;  						//时间
+	int8_t  status;					//0不成功，1成功
+	double  longitude;		//经度
+	double  latitude;		//纬度
+
+}
