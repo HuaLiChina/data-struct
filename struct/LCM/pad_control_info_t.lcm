@@ -1,16 +1,13 @@
 package lcmtypes;
-
 struct pad_control_info_t
 {
-	int64_t utime;  						//时间
-	byte  esr_onoff;						//0不操作 1开 2关 
-	byte  lux40_onoff;						//0不操作 1开 2关
-	byte  gps_onoff;						//0不操作 1开 2关
-	byte  speed_updown;						//0不操作 1加速+5 2减速-5
-	byte  lane_change;						//0不操作 1左换道 2右换道
-	byte  drive_mode;						//0不操作 1人工 2自动   //byte  location_select;					//0不操作 目标位置
-	double  longitude;		                //0不操作 经度
-	double  latitude;		                //0不操作 纬度
-	byte  follow_past;                            //0不操作 1跟车2超车
-	
+	byte esr_onoff;     //ESR开关
+	byte lux40_onoff;   //激光雷达开关
+	byte gps_onoff;  //GPS开关
+	byte speed_updown;   //调速
+	byte lane_change;  //换道
+	byte drive_mode;   //驾驶模式
+	byte work_onoff;   //作业开关
+	byte cancel;   //退出路线
+	byte follow_past;   //跟车超车
 }

@@ -3,7 +3,6 @@ package lcmtypes;
 struct gps_imu_info_t
 {
 	int64_t utime;  		//unix时间
-        int64_t gpsUtime;  		//gps时间标签转unix时间标签后结果
 	double  longitude;		//经度
 	double  latitude;		//纬度
 	float 	altitude;		//高度
